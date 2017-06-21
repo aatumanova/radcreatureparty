@@ -1,0 +1,32 @@
+.logo {
+  margin-bottom: $margin;
+  width: 90%;
+}
+
+@media (min-width: $screen--small) {
+
+  .logo {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: $screen--medium) {
+
+  .logo {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: $screen--large) {
+
+  .logo {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: $screen--x-large) {
+
+  .logo {
+    max-width: 800px;
+  }
+}

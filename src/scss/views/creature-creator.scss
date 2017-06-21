@@ -1,0 +1,79 @@
+.creature-creator {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  &__toolbar {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    margin: 0 auto;
+    width: 100%;
+
+    &__content {
+
+      &--secondary {
+        flex: 0 0 auto;
+      }
+    }
+
+    &__action {
+      appearance: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 8px;
+
+      &:last-child {
+        margin-right: -12px;
+      }
+
+      svg {
+        fill: $body--foreground-color;
+        height: 24px;
+        opacity: 0.25;
+        transition: opacity 0.125s;
+        width: 24px;
+      }
+
+      &:hover {
+
+        svg {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__creature {
+    flex: 1 1 auto;
+    max-height: calc(100vw * #{$creature--aspect-ratio / 100%} - (#{$margin--larger * 2}));
+    position: relative;
+  }
+
+  &__body-part {
+    display: flex;
+    position: absolute;
+    width: 100%;
+
+    $creature--head--percentage: $creature--head--height / $creature--full-height * 100% ;
+    $creature--body--percentage: $creature--body--height / $creature--full-height * 100%;
+    $creature--bottom--percentage: $creature--bottom--height / $creature--full-height * 100%;
+
+    &--head {
+      height: $creature--head--percentage;
+      top: 0;
+    }
+
+    &--body {
+      height: $creature--body--percentage;
+      top: $creature--head--percentage;
+    }
+
+    &--bottom {
+      height: $creature--bottom--percentage;
+      top: $creature--head--percentage + $creature--body--percentage;
+    }
+  }
+}

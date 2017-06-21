@@ -1,0 +1,18 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: $margin--large $margin--larger;
+  width: 100%;
+
+  &__header {
+    flex: 0 0 auto;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 200px;
+  }
+}

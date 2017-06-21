@@ -1,0 +1,50 @@
+.navigation {
+  margin-bottom: $margin--larger;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: $margin;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: $body--foreground-color;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:after {
+      background: currentColor;
+      bottom: -2px;
+      content: '';
+      height: 2px;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      transition: opacity 0.125s;
+    }
+
+    &:hover {
+
+      &:after {
+        opacity: 0.25;
+      }
+    }
+
+    &.is-active {
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}

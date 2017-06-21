@@ -1,0 +1,41 @@
+// Colors
+$black: #000;
+$grey: #c9c9c9;
+$white: #fff;
+
+$body--background-color: $white;
+$body--foreground-color: $black;
+$body--foreground-color--secondary: $grey;
+
+// Spacing
+$base-margin: 12px;
+
+$margin--itsy-bitsy: $base-margin * 1/6;
+$margin--smaller: $base-margin * 1/4;
+$margin--small: $base-margin * 1/2;
+$margin--medium: $base-margin * 2/3;
+$margin: $base-margin;
+$margin--large: $base-margin * 3/2;
+$margin--larger: $base-margin * 2;
+$margin--massive: $base-margin * 3;
+
+// Breakpoints
+$screen--x-small: 320px;
+$screen--small: 640px;
+$screen--smallish: 800px;
+$screen--medium: 1024px;
+$screen--large: 1440px;
+$screen--x-large: 1680px;
+
+// Image Dimensions
+$creature--head--height: 201px;
+$creature--head--width: 554px;
+$creature--body--height: 201px;
+$creature--body--width: 554px;
+$creature--bottom--height: 274px;
+$creature--bottom--width: 554px;
+
+$creature--full-height: $creature--head--height + $creature--body--height + $creature--bottom--height;
+$creature--full-width: $creature--head--width;
+
+$creature--aspect-ratio: $creature--full-height / $creature--full-width * 100%;

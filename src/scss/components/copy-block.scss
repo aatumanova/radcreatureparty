@@ -1,0 +1,31 @@
+.copy-block {
+  width: 100%;
+}
+
+@media (min-width: $screen--small) {
+
+  .copy-block {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: $screen--smallish) {
+
+  .copy-block {
+    max-width: 66%;
+  }
+}
+
+@media (min-width: $screen--medium) {
+
+  .copy-block {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: $screen--x-large) {
+
+  .copy-block {
+    max-width: 40%;
+  }
+}

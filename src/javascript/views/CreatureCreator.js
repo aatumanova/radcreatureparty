@@ -1,73 +1,80 @@
 import React, {Component} from 'react';
 
+import creatureDefinitions from '../constants/creatureDefinitions';
 import ImageSlide from '../components/ImageSlide';
 import ImageSlider from '../components/ImageSlider';
-import creatureDefinitions from '../constants/creatureDefinitions';
 import PrintIcon from '../components/PrintIcon';
 import RandomIcon from '../components/RandomIcon';
 
+const bodyParts = ['head', 'body', 'bottom'];
+
 class CreatureCreator extends Component {
-  constructor() {
-    super();
+  handleImageSlideNavigationClick = (getNextIndex, bodyPart) => {
+    const {history, match} = this.props;
+    const currentBodyPartIndex = Number(match.params[`${bodyPart}ID`]);
+    const bodyPartIDPosition = bodyParts.indexOf(bodyPart);
+    const urlParts = match.url.split('/');
 
-    this.state = {
-      headIndex: 0,
-      bodyIndex: 0,
-      bottomIndex: 0
-    };
-  }
+    // Replace the currently selected body part index with the next one.
+    urlParts[bodyPartIDPosition + 2] = getNextIndex(currentBodyPartIndex);
 
-  handleNextClick = (bodyPart) => {
-    const indexKey = `${bodyPart}Index`;
-    const currentIndex = this.state[indexKey];
-
-    this.setState({
-      [indexKey]: currentIndex === creatureDefinitions.length - 1
-        ? 0
-        : currentIndex + 1
-    });
+    history.replace(urlParts.join('/'));
   };
 
-  handlePreviousClick = (bodyPart) => {
-    const indexKey = `${bodyPart}Index`;
-    const currentIndex = this.state[indexKey];
+  handleNextSlideClick = this.handleImageSlideNavigationClick.bind(
+    this,
+    this.getNextIndex
+  );
 
-    this.setState({
-      [indexKey]: currentIndex === 0
-        ? creatureDefinitions.length - 1
-        : currentIndex - 1
-    });
-  };
+  handlePreviousSlideClick = this.handleImageSlideNavigationClick.bind(
+    this,
+    this.getPreviousIndex
+  );
 
   handlePrintClick() {
     global.print();
   }
 
   handleRandomClick = () => {
-    const nextState = ['head', 'body', 'bottom'].reduce(
+    const maxIndex = creatureDefinitions.length;
+    const parts = bodyParts.reduce(
       (accumulator, bodyPart) => {
-        const maxIndex = creatureDefinitions.length;
-        accumulator[`${bodyPart}Index`] = Math.floor(Math.random() * maxIndex);
+        accumulator[bodyPart] = Math.floor(Math.random() * maxIndex);
 
         return accumulator;
       },
       {}
     );
 
-    this.setState(nextState);
+    this.props.history.replace(
+      `/creature-creator/${parts.head}/${parts.body}/${parts.bottom}/`
+    );
   };
 
-  getBodyPartSlider(id, imageURIs) {
+  getNextIndex(currentBodyPartIndex) {
+    return currentBodyPartIndex === creatureDefinitions.length - 1
+      ? 0
+      : currentBodyPartIndex + 1;
+  }
+
+  getPreviousIndex(currentBodyPartIndex) {
+    return currentBodyPartIndex === 0
+      ? creatureDefinitions.length - 1
+      : currentBodyPartIndex - 1
+  }
+
+  getBodyPartSlider(bodyPart, imageURIs) {
     const classes = (
-      `creature-creator__body-part creature-creator__body-part--${id}`
+      `creature-creator__body-part creature-creator__body-part--${bodyPart}`
     );
+    const activeID = Number(this.props.match.params[`${bodyPart}ID`] || 0);
 
     return (
-      <div className={classes} key={id}>
-        <ImageSlider activeIndex={this.state[`${id}Index`]}
-          onNextClick={this.handleNextClick}
-          onPreviousClick={this.handlePreviousClick}
-          id={id}>
+      <div className={classes} key={bodyPart}>
+        <ImageSlider activeIndex={activeID}
+          onNextClick={this.handleNextSlideClick}
+          onPreviousClick={this.handlePreviousSlideClick}
+          id={bodyPart}>
           {imageURIs.map((uri, index) => {
             return <ImageSlide key={index} uri={uri} />;
           })}
@@ -77,21 +84,28 @@ class CreatureCreator extends Component {
   }
 
   getBodyPartSliders() {
-    const bodyParts = creatureDefinitions.reduce(
+    const bodyPartURIs = creatureDefinitions.reduce(
       (accumulator, creature) => {
         accumulator.head.push(creature.headURI);
         accumulator.body.push(creature.bodyURI);
         accumulator.bottom.push(creature.bottomURI);
 
         return accumulator;
-      }, {head: [], body: [], bottom: []});
+      },
+      bodyParts.reduce((accumulator, bodyPart) => {
+        accumulator[bodyPart] = [];
 
-    return Object.keys(bodyParts).map(bodyPart => {
-      return this.getBodyPartSlider(bodyPart, bodyParts[bodyPart]);
+        return accumulator;
+      }, {})
+    );
+
+    return Object.keys(bodyPartURIs).map(bodyPart => {
+      return this.getBodyPartSlider(bodyPart, bodyPartURIs[bodyPart]);
     });
   }
 
   render() {
+
     return (
       <div className="creature-creator">
         <section className="creature-creator__creature">

@@ -21,10 +21,10 @@ ReactDOM.render(
         <Navigation />
       </PageHeader>
       <PageBody>
-        <Redirect exact path="/" to="/creature-creator" />
-        <Route path="/creature-creator" component={CreatureCreator} />
+        <Route path="/creature-creator/:headID?/:bodyID?/:bottomID?" component={CreatureCreator} />
         <Route path="/artists" component={Artists} />
         <Route path="/about" component={About} />
+        <Redirect exact from="/" to="/creature-creator/0/0/0" />
       </PageBody>
     </Page>
   </Router>,

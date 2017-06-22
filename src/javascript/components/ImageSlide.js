@@ -33,7 +33,7 @@ class ImageSlide extends Component {
 
     return (
       <div className={classes} style={style}>
-        <img alt="" className="image-slider__image" src={`/${props.uri}`} />
+        <img alt="" className="image-slider__image" src={props.uri} />
       </div>
     );
   }

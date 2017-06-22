@@ -24,7 +24,11 @@ class Artists extends Component {
         });
 
         return accumulator.concat(
-          <figure className="image-gallery__item" key={index}>
+          <figure className="image-gallery__item" key={index} onClick={() => {
+            this.props.history.push(
+              `/creature-creator/${index}/${index}/${index}/`
+            );
+          }}>
             <div className="image-gallery__image">
               {images}
             </div>

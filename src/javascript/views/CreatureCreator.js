@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom';
 
 import creatureDefinitions from '../constants/creatureDefinitions';
 import ImageSlide from '../components/ImageSlide';
@@ -16,6 +17,7 @@ class CreatureCreator extends Component {
     const urlParts = match.url.split('/');
 
     // Replace the currently selected body part index with the next one.
+    // This could probably be better...
     urlParts[bodyPartIDPosition + 2] = getNextIndex(currentBodyPartIndex);
 
     history.replace(urlParts.join('/'));
@@ -105,6 +107,9 @@ class CreatureCreator extends Component {
   }
 
   render() {
+    if (this.props.match.params.headID == null) {
+      return <Redirect to="/creature-creator/0/0/0" />;
+    }
 
     return (
       <div className="creature-creator">

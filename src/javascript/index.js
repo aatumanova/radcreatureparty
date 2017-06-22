@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Redirect, Route} from 'react-router-dom';
+import {HashRouter as Router, Redirect, Route} from 'react-router-dom';
 
 import About from './views/About';
 import Artists from './views/Artists';
@@ -21,10 +21,12 @@ ReactDOM.render(
         <Navigation />
       </PageHeader>
       <PageBody>
+        <Route exact path="/" render={() => {
+          return <Redirect to="/creature-creator/0/0/0" />;
+        }} />
         <Route path="/creature-creator/:headID?/:bodyID?/:bottomID?" component={CreatureCreator} />
         <Route path="/artists" component={Artists} />
         <Route path="/about" component={About} />
-        <Redirect exact from="/" to="/creature-creator/0/0/0" />
       </PageBody>
     </Page>
   </Router>,

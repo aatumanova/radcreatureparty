@@ -77,8 +77,12 @@ class CreatureCreator extends Component {
           onNextClick={this.handleNextSlideClick}
           onPreviousClick={this.handlePreviousSlideClick}
           id={bodyPart}>
-          {imageURIs.map((uri, index) => {
-            return <ImageSlide key={index} uri={uri} />;
+          {imageURIs.map((uris, index) => {
+            return (
+              <ImageSlide key={index}
+                largeURI={uris.large}
+                smallURI={uris.small} />
+            );
           })}
         </ImageSlider>
       </div>
@@ -88,9 +92,18 @@ class CreatureCreator extends Component {
   getBodyPartSliders() {
     const bodyPartURIs = creatureDefinitions.reduce(
       (accumulator, creature) => {
-        accumulator.head.push(creature.headURI);
-        accumulator.body.push(creature.bodyURI);
-        accumulator.bottom.push(creature.bottomURI);
+        accumulator.head.push({
+          small: creature.headSmallURI,
+          large: creature.headLargeURI
+        });
+        accumulator.body.push({
+          small: creature.bodySmallURI,
+          large: creature.bodyLargeURI
+        });
+        accumulator.bottom.push({
+          small: creature.bottomSmallURI,
+          large: creature.bottomLargeURI
+        });
 
         return accumulator;
       },

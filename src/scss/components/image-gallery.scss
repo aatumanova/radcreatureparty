@@ -4,10 +4,31 @@
   margin-bottom: $margin--massive * -1;
 
   &__item {
+    cursor: pointer;
     flex: 0 0 auto;
     height: auto;
     margin-bottom: $margin--massive;
+    position: relative;
     width: 100%;
+
+    &:hover {
+
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      background: $overlay;
+      content: '';
+      display: block;
+      height: 100%;
+      opacity: 0;
+      position: absolute;
+      transition: opacity 0.125s;
+      width: 100%;
+      z-index: 100;
+    }
   }
 
   &__image {

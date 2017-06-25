@@ -10,7 +10,7 @@ class Artists extends Component {
       (accumulator, creature, index) => {
         const {artist} = creature;
         const images = bodyParts.map(bodyPart => {
-          const imageURI = creature[`${bodyPart}URI`];
+          const imageURI = creature[`${bodyPart}SmallURI`];
           const classes = (
             'creature-creator__body-part ' +
             `creature-creator__body-part--${bodyPart}`

@@ -31,29 +31,25 @@ class ImageSlide extends Component {
       transform: `scale(${slideScale}) translateX(${slideOffset}%)`
     };
 
-    let largeImage = null;
-    let smallImage = null;
+    let smallImageURI = null;
+    let largeImageURI = null;
 
     if (Math.abs(props.offset) < 2) {
-      smallImage = (
-        <img alt=""
-          className="image-slider__image image-slider__image--small"
-          src={props.smallURI} />
-      );
+      smallImageURI = props.smallURI;
     }
 
     if (props.offset === 0) {
-      largeImage = (
-        <img alt=""
-          className="image-slider__image image-slider__image--large"
-          src={props.largeURI} />
-      );
+      largeImageURI = props.largeURI;
     }
 
     return (
       <div className={classes} style={style}>
-        {smallImage}
-        {largeImage}
+        <img alt=""
+          className="image-slider__image image-slider__image--small"
+          src={smallImageURI} />
+        <img alt=""
+          className="image-slider__image image-slider__image--large"
+          src={largeImageURI} />
       </div>
     );
   }

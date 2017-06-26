@@ -1,3 +1,5 @@
+[Launch the Rad Creature Party app](https://jfurrow.github.io/rad-creature-party).
+
 ## Rad Creature Party
 
 Rad Creature Party is a collective art project made by a group of friends at a birthday party at a Ramen shop in Oakland, California.

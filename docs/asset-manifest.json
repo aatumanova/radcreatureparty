@@ -1,11 +1,11 @@
 {
-  "main.css": "static/css/main.758311c8.css",
-  "main.css.map": "static/css/main.758311c8.css.map",
-  "main.js": "static/js/main.4a3a8a3d.js",
-  "main.js.map": "static/js/main.4a3a8a3d.js.map",
-  "static/media/Body 0.jpeg": "static/media/Body 0.23f57ad7.jpeg",
-  "static/media/Body 1.jpeg": "static/media/Body 1.f7e47f88.jpeg",
-  "static/media/Body 10.jpeg": "static/media/Body 10.7c6fa2e9.jpeg",
+  "main.css": "static/css/main.24c14320.css",
+  "main.css.map": "static/css/main.24c14320.css.map",
+  "main.js": "static/js/main.5139b8bc.js",
+  "main.js.map": "static/js/main.5139b8bc.js.map",
+  "static/media/Body 0.jpeg": "static/media/Body 0.aea480c8.jpeg",
+  "static/media/Body 1.jpeg": "static/media/Body 1.26c88a0a.jpeg",
+  "static/media/Body 10.jpeg": "static/media/Body 10.45a68461.jpeg",
   "static/media/Body 11.jpeg": "static/media/Body 11.29bb0432.jpeg",
   "static/media/Body 12.jpeg": "static/media/Body 12.616c28e2.jpeg",
   "static/media/Body 13.jpeg": "static/media/Body 13.8d89b66e.jpeg",
@@ -59,9 +59,5 @@
   "static/media/Head 6.jpeg": "static/media/Head 6.81486179.jpeg",
   "static/media/Head 7.jpeg": "static/media/Head 7.9cf8538b.jpeg",
   "static/media/Head 8.jpeg": "static/media/Head 8.4b076997.jpeg",
-  "static/media/Head 9.jpeg": "static/media/Head 9.2fd9f678.jpeg",
-  "static/media/montserrat-bold-webfont.woff": "static/media/montserrat-bold-webfont.d09d4f1f.woff",
-  "static/media/montserrat-bold-webfont.woff2": "static/media/montserrat-bold-webfont.f2b80f30.woff2",
-  "static/media/montserrat-regular-webfont.woff": "static/media/montserrat-regular-webfont.85afb274.woff",
-  "static/media/montserrat-regular-webfont.woff2": "static/media/montserrat-regular-webfont.333cc088.woff2"
+  "static/media/Head 9.jpeg": "static/media/Head 9.2fd9f678.jpeg"
 }

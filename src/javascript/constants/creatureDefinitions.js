@@ -1,6 +1,6 @@
 export default [
   {
-    artist: 'Foo Bar',
+    artist: 'Ryan Nordman',
     id: 0,
     headSmallURI: require('../../images/small/Head 0.jpeg'),
     headLargeURI: require('../../images/large/Head 0.jpeg'),
@@ -10,7 +10,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 0.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Isabelle Heye',
     id: 1,
     headSmallURI: require('../../images/small/Head 1.jpeg'),
     headLargeURI: require('../../images/large/Head 1.jpeg'),
@@ -20,7 +20,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 1.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Erika Sjule',
     id: 2,
     headSmallURI: require('../../images/small/Head 2.jpeg'),
     headLargeURI: require('../../images/large/Head 2.jpeg'),
@@ -30,7 +30,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 2.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Danica Tiu',
     id: 3,
     headSmallURI: require('../../images/small/Head 3.jpeg'),
     headLargeURI: require('../../images/large/Head 3.jpeg'),
@@ -40,7 +40,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 3.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: '—',
     id: 4,
     headSmallURI: require('../../images/small/Head 4.jpeg'),
     headLargeURI: require('../../images/large/Head 4.jpeg'),
@@ -50,7 +50,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 4.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Margaret Gordon',
     id: 5,
     headSmallURI: require('../../images/small/Head 5.jpeg'),
     headLargeURI: require('../../images/large/Head 5.jpeg'),
@@ -60,7 +60,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 5.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Kaj Peterson',
     id: 6,
     headSmallURI: require('../../images/small/Head 6.jpeg'),
     headLargeURI: require('../../images/large/Head 6.jpeg'),
@@ -70,7 +70,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 6.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Hannah Root',
     id: 7,
     headSmallURI: require('../../images/small/Head 7.jpeg'),
     headLargeURI: require('../../images/large/Head 7.jpeg'),
@@ -80,7 +80,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 7.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'John Furrow',
     id: 8,
     headSmallURI: require('../../images/small/Head 8.jpeg'),
     headLargeURI: require('../../images/large/Head 8.jpeg'),
@@ -90,7 +90,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 8.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: '—',
     id: 9,
     headSmallURI: require('../../images/small/Head 9.jpeg'),
     headLargeURI: require('../../images/large/Head 9.jpeg'),
@@ -100,7 +100,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 9.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: '—',
     id: 10,
     headSmallURI: require('../../images/small/Head 10.jpeg'),
     headLargeURI: require('../../images/large/Head 10.jpeg'),
@@ -110,7 +110,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 10.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Anastasia Tumanova',
     id: 11,
     headSmallURI: require('../../images/small/Head 11.jpeg'),
     headLargeURI: require('../../images/large/Head 11.jpeg'),
@@ -120,7 +120,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 11.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Elle Destree',
     id: 12,
     headSmallURI: require('../../images/small/Head 12.jpeg'),
     headLargeURI: require('../../images/large/Head 12.jpeg'),
@@ -130,7 +130,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 12.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Nora Lewandowski',
     id: 13,
     headSmallURI: require('../../images/small/Head 13.jpeg'),
     headLargeURI: require('../../images/large/Head 13.jpeg'),
@@ -140,7 +140,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 13.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Ben Blasdell',
     id: 14,
     headSmallURI: require('../../images/small/Head 14.jpeg'),
     headLargeURI: require('../../images/large/Head 14.jpeg'),
@@ -150,7 +150,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 14.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: `Heather D'Angelo`,
     id: 15,
     headSmallURI: require('../../images/small/Head 15.jpeg'),
     headLargeURI: require('../../images/large/Head 15.jpeg'),
@@ -160,7 +160,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 15.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Dave Marvin',
     id: 16,
     headSmallURI: require('../../images/small/Head 16.jpeg'),
     headLargeURI: require('../../images/large/Head 16.jpeg'),
@@ -170,7 +170,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 16.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Todd Wilkinson',
     id: 17,
     headSmallURI: require('../../images/small/Head 17.jpeg'),
     headLargeURI: require('../../images/large/Head 17.jpeg'),
@@ -180,7 +180,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 17.jpeg')
   },
   {
-    artist: 'Foo Bar',
+    artist: 'Steve Diebold',
     id: 18,
     headSmallURI: require('../../images/small/Head 18.jpeg'),
     headLargeURI: require('../../images/large/Head 18.jpeg'),

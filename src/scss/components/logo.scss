@@ -1,32 +1,68 @@
 .logo {
+  font-family: 'Monoton', 'Helvetica', sans-serif;
+  font-size: 2.5rem;
+  line-height: 0.95;
   margin-bottom: $margin;
-  width: 90%;
+  margin-top: 0;
+  text-transform: uppercase;
+
+  &__word {
+    display: inline-block;
+    margin-right: 0.75rem;
+    white-space: nowrap;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__kerning {
+    display: inline-block;
+    margin-left: -0.25rem;
+  }
 }
 
 @media (min-width: $screen--small) {
 
   .logo {
-    max-width: 600px;
+    font-size: 3.125rem;
+
+    &__word {
+      margin-right: 1.55rem;
+    }
+
+    &__kerning {
+      margin-left: -0.35rem;
+    }
   }
 }
 
 @media (min-width: $screen--medium) {
 
   .logo {
-    max-width: 700px;
+    font-size: 4rem;
+
+    &__word {
+      margin-right: 2.5rem;
+    }
+
+    &__kerning {
+      margin-left: -0.4rem;
+    }
   }
 }
 
 @media (min-width: $screen--large) {
 
   .logo {
-    max-width: 800px;
-  }
-}
+    font-size: 4.125rem;
 
-@media (min-width: $screen--x-large) {
+    &__word {
+      margin-right: 2rem;
+    }
 
-  .logo {
-    max-width: 800px;
+    &__kerning {
+      margin-left: -0.5rem;
+    }
   }
 }

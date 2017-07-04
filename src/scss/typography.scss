@@ -1,35 +1,29 @@
-@font-face {
-  font-family: 'montserratregular';
-  src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
-    url('../fonts/montserrat-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'montserratbold';
-  src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
-    url('../fonts/montserrat-bold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html {
   color: $body--foreground-color;
-  font-family: 'montserratregular', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
-  font-weight: normal;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  transition: color 0.125s;
+
+  &:visited,
+  &:active {
+    color: inherit;
+  }
 }
 
 strong {
- font-family: 'montserratbold', sans-serif;
- font-weight: normal;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 700;
 }
 
 h1,
 h2 {
-  font-weight: normal;
-  margiN: $margin--larger 0;
+  font-weight: 400;
+  margin: $margin--larger 0;
 }
 
 h1 {
@@ -45,4 +39,11 @@ p {
 
 p {
   color: $body--foreground-color--secondary;
+
+  a {
+
+    &:hover {
+      color: $body--foreground-color--secondary--link--hover;
+    }
+  }
 }

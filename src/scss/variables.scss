@@ -7,6 +7,7 @@ $overlay: rgba(0, 0, 0, 0.04);
 $body--background-color: $white;
 $body--foreground-color: $black;
 $body--foreground-color--secondary: $grey;
+$body--foreground-color--secondary--link--hover: darken($body--foreground-color--secondary, 20%);
 
 // Spacing
 $base-margin: 12px;

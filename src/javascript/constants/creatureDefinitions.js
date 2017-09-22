@@ -90,7 +90,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 8.jpeg')
   },
   {
-    artist: '—',
+    artist: 'Ophir Bruck',
     id: 9,
     headSmallURI: require('../../images/small/Head 9.jpeg'),
     headLargeURI: require('../../images/large/Head 9.jpeg'),
@@ -100,7 +100,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 9.jpeg')
   },
   {
-    artist: '—',
+    artist: 'Jesse Taggert',
     id: 10,
     headSmallURI: require('../../images/small/Head 10.jpeg'),
     headLargeURI: require('../../images/large/Head 10.jpeg'),

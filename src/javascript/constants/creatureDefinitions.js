@@ -40,7 +40,7 @@ export default [
     bottomLargeURI: require('../../images/large/Bottom 3.jpeg')
   },
   {
-    artist: '—',
+    artist: 'Laura Cochrane',
     id: 4,
     headSmallURI: require('../../images/small/Head 4.jpeg'),
     headLargeURI: require('../../images/large/Head 4.jpeg'),
